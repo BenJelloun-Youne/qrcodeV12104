@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Générateur de code QR</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Générateur de code QR</h1>
+
+      {% if genere %}
+      <div class="alert alert-success" role="alert">
+        Le code QR a été généré avec succès et enregistré sous le nom de fichier <strong>{{ nom_fichier }}</strong>.
+      </div>
+      {% endif %}
+
+      <form method="POST" action="/qrcode">
+
+        <div class="form-group">
+          <label for="nom">Nom:</label>
+          <input type="text" class="form-control" id="nom" name="nom" placeholder="Entrez votre nom">
+        </div>
+        <div class="form-group">
+          <label for="prenom">Prénom:</label>
+          <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Entrez votre prénom">
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail:</label>
+          <input type="email" class="form-control" id="email" name="email">
+
+
+        </div>
+        <div class="form-group">
+          <label for="telephone">Téléphone:</label>
+          <input type="tel" class="form-control" id="telephone" name="telephone">
+        </div>
+        <div class="form-group">
+          <label for="site_web">Site Web:</label>
+          <input type="url" class="form-control" id="site_web" name="site_web">
+        </div>
+        <div class="form-group">
+          <label for="adresse">Adresse:</label>
+          <input type="text" class="form-control" id="adresse" name="adresse">
+        </div>
+        <div class="form-group">
+          <label for="ville">Ville:</label>
+          <input type="text" class="form-control" id="ville" name="ville">
+        </div>
+        <div class="form-group">
+          <label for="code_postal">Code Postal:</label>
+          <input type="text" class="form-control" id="code_postal" name="code_postal">
+        </div>
+        <button type="submit" class="btn btn-primary">Générer le code QR</button>
+      </form>
+    </div>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/youness-ben-jelloun-95a704130/">LinkedIn</a>
+    </div>
+    
+  </body>
+</html>

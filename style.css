@@ -1,0 +1,90 @@
+/* Fichier style.css */
+
+/* Couleurs de base */
+:root {
+  --bg-color: #f5f5f5;
+  --text-color: #333;
+  --highlight-color: #007aff;
+}
+
+/* Styles généraux */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: var(--highlight-color);
+  color: #fff;
+  border-radius: 0.25rem;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn:focus, .btn.focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 122, 255, 0.5);
+  transform: scale(1.05);
+}
+
+/* Styles spécifiques pour la page QR Code */
+.qr-code {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.qr-code h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.qr-code img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+/* Styles pour les liens en bas de page */
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background-color: var(--bg-color);
+  border-top: 1px solid #ddd;
+}
+
+.links a {
+  color: var(--highlight-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.links a:hover {
+  color: #000;
+}

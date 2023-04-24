@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Code QR généré</title>
+  </head>
+  <body>
+    <h1>Code QR généré:</h1>
+    <img src="{{ url_for('static', filename=nom_fichier) }}" alt="Code QR">
+    <br><br>
+    <a href="{{ url_for('download_qrcode', filename=nom_fichier) }}" download="qrcode.png"><button>Télécharger le code QR</button></a>
+    <p>Cliquez sur le bouton pour télécharger le code QR généré.</p>
+  </body>
+</html>
